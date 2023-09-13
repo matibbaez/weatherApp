@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(32,103,232);
+    background: linear-gradient(90deg, rgba(32,103,232,1) 0%, rgba(29,148,173,1) 49%, rgba(100,236,255,1) 94%);  
+    background-position: center;
+    background-size: cover;
+}
+
+.glass-card-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    height: 80px; /* Altura inicial de 80px */
+    transition: height 0.3s ease; /* Transición suave para la altura */
+}
+
+/* Estilos para la altura cuando la clase "expanded" está presente */
+.glass-card-container.expanded {
+    height: 458px; /* Altura expandida a 450px */
+    flex-direction: column;
+}
+
+
+.expanded .weather-info {
+    margin-top: 25px;
+    display: block; /* Mostrar la información del clima cuando se expande */
+}
+
+.weather-info {
+    display: none;
+    text-align: center;
+}
+
+.weather-info .day {
+    font-size: 36px;
+}
+
+.weather-info .date {
+    font-size: 24px;
+}
+
+.weather-info .temperature {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.days {
+    display: flex;
+    justify-content: center;
+}
+
+.day-container .day-small {
+    font-size: 20px;
+}
+
+.day-container .temp {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.day-container .icon {
+    width: 50px; /* Tamaño deseado para el icono */
+    height: 50px; /* Tamaño deseado para el icono */
+}
+.weather-info {
+    display: none; /* Ocultar la información del clima por defecto */
+}
+
+.title-proyect h1{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.search-box{
+    width: 100%;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-box input{
+    color: #06283D;
+    width: 80%;
+    font-size: 27px;
+    font-weight: 500;
+    padding-left: 32px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+
+}
+
+.search-box input::placeholder{
+    font-size: 20px;
+    font-weight: 500;
+    color: #06283D;
+    text-transform: capitalize;
+}
+
+.search-box button{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background: #06283D;
+    color: #dff6ff;
+    border-radius: 50%;
+    border: none;
+    font-size: 22px;
+    transition: 0.4s ease;
+}
+
+.search-box button:hover{
+    color: #06283D;
+    background: #dff6ff;
+}
+
+.search-box i{
+    position: absolute;
+    color: #06283D;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+
+.glass-card-container{
+    width: 450px;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid rgba(255, 255, 255, 0.6);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+    box-shadow: 0px 3px 30px rgba(255, 255, 255, 0.25);
+}
+
+.first-line{
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.day{
+    font-size: 34px;
+    color: white;
+    font-weight: 600;
+}
+
+.date{
+    font-size: 18px;
+    color: white;
+    font-weight: 400;
+}
+
+.temperature{
+    font-size: 54px;
+    color: white;
+    font-weight: 700;
+}
+
+.days{
+    margin-top: 2rem;
+    width: 100%;
+    height: 145px;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid rgba(255, 255, 255, 0.6);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0px 3px 30px rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.day-container{
+    height: 100%;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.day-small{
+    margin: 10px;
+    color: white;
+    text-align: center;
+}
+
+.temp{
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.active{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: inherit;
+}
+
+.active .icon{
+    filter: invert(1);
+    opacity: 0.8;
+}
+
+.active .day-small, .active .temp{
+    color: #3B2F2F;
+}
