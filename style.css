@@ -191,16 +191,10 @@ body{
     height: 145px;
     margin-left: auto;
     margin-right: auto;
-    border-top: 1px solid white;
-    border-left: 1px solid white;
-    border-right: 1px solid rgba(255, 255, 255, 0.6);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
-    box-shadow: 0px 3px 30px rgba(255, 255, 255, 0.25);
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.25);
 }
 
 .day-container{
@@ -212,6 +206,10 @@ body{
     flex-direction: column;
     padding: 5px;
     box-sizing: border-box;
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .day-small{
@@ -238,4 +236,95 @@ body{
 
 .active .day-small, .active .temp{
     color: #3B2F2F;
+}
+
+.days {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px; /* Set a fixed height, adjust as needed */
+    margin-top: 20px; /* Add margin to center the days section vertically */
+}
+
+/* Add this CSS to vertically center the day containers */
+.day-container.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 3px 30px rgba(255, 255, 255, 0.25);
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid rgba(255, 255, 255, 0.6);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+
+/* Estilos para pantallas de 800px o menos */
+@media (max-width: 800px) {
+    .days {
+        flex-wrap: wrap; /* Ajusta los días en varias filas */
+        justify-content: center; /* Centra los elementos */
+        margin-top: 20px;
+        margin-top: 2rem;
+        width: 80%;
+        max-width: 600px; /* Establece un ancho máximo para evitar que se extienda demasiado */
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .glass-card-container {
+        flex-direction: column; /* Cambia la dirección en pantallas pequeñas */
+        padding: 20px;
+        width: 333px;
+        height: 105px;
+        border-top: 1px solid white;
+        border-left: 1px solid white;
+        border-right: 1px solid rgba(255, 255, 255, 0.6);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 2rem 1rem;
+        box-sizing: border-box;
+        box-shadow: 0px 3px 30px rgba(255, 255, 255, 0.25);
+        
+    }
+
+    .glass-card-container.expanded {
+        height: 610px;
+        flex-direction: column;
+    }
+
+    .title-proyect h1 {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        color: #fff;
+        font-size: 2rem;
+        margin-bottom: 5px;
+        position: relative;
+    }
+
+    .search-box input {
+        color: #06283D;
+        width: 70%;
+        font-size: 1.50rem;
+        font-weight: 500;
+        padding-left: 32px;
+        outline: none;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .day-container {
+        width: 30%; /* Cambia el ancho de los contenedores de día para ajustarse en pantallas pequeñas */
+        padding: 5px;
+        box-sizing: border-box;
+    }
+
+    .day-container .temp {
+        font-size: 1.25rem; /* Reducción del tamaño de la fuente */
+    }
 }
