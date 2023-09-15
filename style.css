@@ -104,6 +104,7 @@ body{
     padding-left: 32px;
     outline: none;
     border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 
 }
 
@@ -264,8 +265,6 @@ body{
     .days {
         flex-wrap: wrap; /* Ajusta los días en varias filas */
         justify-content: center; /* Centra los elementos */
-        margin-top: 20px;
-        margin-top: 2rem;
         width: 80%;
         max-width: 600px; /* Establece un ancho máximo para evitar que se extienda demasiado */
         margin-left: auto;
@@ -279,8 +278,8 @@ body{
     .glass-card-container {
         flex-direction: column; /* Cambia la dirección en pantallas pequeñas */
         padding: 20px;
-        width: 333px;
-        height: 105px;
+        width: 300px;
+        height: 110px;
         border-top: 1px solid white;
         border-left: 1px solid white;
         border-right: 1px solid rgba(255, 255, 255, 0.6);
@@ -293,8 +292,23 @@ body{
         
     }
 
+    .weather-info .day {
+        font-size: 1.75rem;
+        margin-top: -15px;
+    }
+
+    .weather-info .date {
+        font-size: 1.5rem;
+    }
+
+    .weather-info .temperature {
+        font-size: 1.75rem;
+        font-weight: bold;
+        margin: 3px 0;
+    }
+
     .glass-card-container.expanded {
-        height: 610px;
+        height: 520px;
         flex-direction: column;
     }
 
@@ -325,6 +339,6 @@ body{
     }
 
     .day-container .temp {
-        font-size: 1.25rem; /* Reducción del tamaño de la fuente */
+        font-size: 1rem; /* Reducción del tamaño de la fuente */
     }
 }
